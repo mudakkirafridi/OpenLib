@@ -21,32 +21,33 @@ class AboutPage extends StatelessWidget {
         title: const Text("Openlib"),
         titleTextStyle: Theme.of(context).textTheme.displayLarge,
       ),
-      body: const SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+      body:  SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.vertical,
         child: Padding(
-          padding: EdgeInsets.only(left: 5, right: 5, top: 10),
+          padding: const EdgeInsets.only(left: 5, right: 5, top: 10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TitleText("About"),
-              Padding(
+              const TitleText("About"),
+              const Padding(
                 padding:
                     EdgeInsets.only(left: 7, right: 7, top: 13, bottom: 10),
                 child: Text(
-                  "An Open source app to download and read books from shadow library (Anna`s Archive)",
+                  "OpenLib is a Flutter-based app built by book lovers to make discovering your next read easy and enjoyable. With smart search, personalized recommendations, and a clean interface, OpenLib helps you explore books you’ll love—seamlessly on both Android and iOS. Happy reading!",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
               ),
-              Padding(
+              
+              const Padding(
                 padding: EdgeInsets.only(left: 7, right: 7, top: 10),
                 child: Text(
                   "Version",
                   style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(left: 7, right: 7, top: 5),
                 child: Text(
                   version,
@@ -56,34 +57,29 @@ class AboutPage extends StatelessWidget {
                       color: Colors.grey),
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.only(left: 7, right: 7, top: 15),
+
+              const Padding(
+                padding: EdgeInsets.only(left: 7, right: 7, top: 10),
                 child: Text(
-                  "Github",
+                  "About Developer",
                   style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
                 ),
               ),
-              _UrlText(
-                text: 'Open Github Page',
-                url: 'https://github.com/dstark5/Openlib',
-              ),
-              _UrlText(
-                  text: 'Contribute To Openlib',
-                  url:
-                      'https://github.com/dstark5/Openlib/blob/main/CONTRIBUTING.md'),
-              _UrlText(
-                  text: 'Report An Issue',
-                  url: 'https://github.com/dstark5/Openlib/issues'),
               Padding(
-                padding: EdgeInsets.only(left: 7, right: 7, top: 15),
+                padding: const EdgeInsets.symmetric(vertical: 5),
+                child: Image.asset('assets/dev.PNG'),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(left: 7, right: 7, top: 5),
                 child: Text(
-                  "Licence",
-                  style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+                  'OpenLib was developed by Rizwan Khan, a passionate Flutter developer with a love for books and clean, user-focused design. Combining his technical skills with a reader’s mindset, Rizwan built OpenLib to help others discover great books with ease.',
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey),
                 ),
               ),
-              _UrlText(
-                  text: "GPL v3.0 license",
-                  url: 'https://www.gnu.org/licenses/gpl-3.0.en.html'),
+             
             ],
           ),
         ),
